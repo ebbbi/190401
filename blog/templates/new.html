@@ -1,0 +1,5 @@
+<h1>새 글</h1>
+<form method='Post' class='Postform' enctype="multipart/form-data">{%csrf_token%}
+    {{form.as_p}}
+    <button type="submit">저장</button>
+</form>

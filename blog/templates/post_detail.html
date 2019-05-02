@@ -1,0 +1,21 @@
+<div class="post">
+    <h1>{{post.title}}</h1><br>
+    {{post.category}}<br>
+    {{post.pub_date}}<br>
+    {{post.writer}}<br><br>
+    {{post.content}}<br><br>
+    {%if post.image%}
+        <img src="{{post.image.url}}" height=200>
+    {%endif%}
+    <br><br><br>
+    <a href="{%url 'post_edit' index=post.pk%}">수정하기</a>
+    <a href="{%url 'home'%}">홈</a>
+    <a href="{%url 'post_delete' pk=post.pk%}">삭제하기</a>
+</div>
+    
+
+<style>
+    .post{
+        text-align:center;
+    }
+</style>
